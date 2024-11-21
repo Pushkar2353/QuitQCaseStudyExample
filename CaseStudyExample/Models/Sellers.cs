@@ -12,7 +12,6 @@ namespace CaseStudyExample.Models
             Products = new HashSet<Products>();
         }
         */
-        [Key]
         public int SellerId { get; set; }
 
         [Required(ErrorMessage = "Phone Number is required")]

@@ -35,12 +35,15 @@ namespace CaseStudyExample.Models
 
         [Required(ErrorMessage = "Product Url is required")]
         public string? ProductUrl { get; set; }
+
+        [NotMapped]
         public IFormFile? ProductImage { get; set; }
+        public string? ProductImagePath { get; set; }
 
 
         public virtual Categories? Categories { get; set; } = null!;
         public virtual Sellers? Seller { get; set; } = null!;
-        public virtual ICollection<ProductsInventory>? ProductsInventory { get; set; }
+        public virtual ICollection<ProductsInventory> ProductsInventory { get; set; } = new List<ProductsInventory>();
         public virtual ICollection<Cart>? Cart { get; set; }
         public virtual ICollection<Reviews>? Reviews { get; set; }
 

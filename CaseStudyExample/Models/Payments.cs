@@ -28,25 +28,25 @@ namespace CaseStudyExample.Models
     public enum PaymentMethod
     {
         [EnumMember(Value = "Credit Card")]
-        CreditCard,
+        CreditCard = 1,
 
         [EnumMember(Value = "Debit Card")]
-        DebitCard,
+        DebitCard = 2,
 
         [EnumMember(Value = "Net Banking")]
-        NetBanking,
+        NetBanking = 3,
 
         [EnumMember(Value = "UPI")]
-        UPI,
+        UPI = 4,
 
         [EnumMember(Value = "Cash on Delivery")]
-        CashOnDelivery
+        CashOnDelivery = 5
     }
     public enum PaymentStatus
     {
-        Pending, 
-        Completed, 
-        Failed
+        Pending = 0, 
+        Completed = 1, 
+        Failed = 2
     }
 
 }

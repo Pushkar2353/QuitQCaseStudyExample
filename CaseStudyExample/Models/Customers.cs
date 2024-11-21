@@ -7,19 +7,18 @@ namespace CaseStudyExample.Models
 {
     public class Customers : Users
     {
-        [Key]
         public int CustomerId { get; set; }
 
         [Required(ErrorMessage = "Phone Number is required")]
         [Phone(ErrorMessage = "Invalid Phone Number")]
-        public int PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Gender is required.")]
         [EnumDataType(typeof(Gender))]
         public Gender Gender { get; set; }
 
         [Required(ErrorMessage = "Date of Birth is required.")]
-        public DateOnly DateofBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
 
         [Required(ErrorMessage = "Address is required.")]
         public string AddressLine1 { get; set; } = string.Empty;

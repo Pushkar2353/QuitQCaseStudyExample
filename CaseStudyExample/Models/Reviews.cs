@@ -15,7 +15,7 @@ namespace CaseStudyExample.Models
         public int Rating { get; set; }
 
         [Column(TypeName = "TEXT")]
-        public string ReviewText { get; set; } = string.Empty;
+        public string? ReviewText { get; set; }
         public DateTime ReviewDate { get; set; } = DateTime.Now;
 
         public virtual Products? Products { get; set; } = null!;

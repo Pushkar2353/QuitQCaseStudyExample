@@ -33,24 +33,16 @@ namespace CaseStudyExample.Models
         public string? Password { get; set; }
 
         [Required(ErrorMessage = "UserType is required.")]
-        [EnumDataType(typeof(UserType))]
-        public UserType UserType { get; set; }
+        public string? UserType { get; set; }
 
-        public virtual Customers? Customers { get; set; } = null!;
-        public virtual Sellers? Sellers { get; set; } = null!;
-        public virtual Administrator? Administrator { get; set; } = null!;
+        public virtual Customers? Customers { get; set; }
+        public virtual Sellers? Sellers { get; set; }
+        public virtual Administrator? Administrator { get; set; }
         public virtual ICollection<Cart>? Cart { get; set; }
         public virtual ICollection<Orders>? Orders { get; set; }
         public virtual ICollection<Payments>? Payments { get; set; }
         public virtual ICollection<Reviews>? Reviews { get; set; }
 
-    }
-
-    public enum UserType
-    {
-        Customer,
-        Seller,
-        Admin
     }
     public enum Gender
     {

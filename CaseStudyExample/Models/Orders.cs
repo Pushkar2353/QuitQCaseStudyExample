@@ -26,7 +26,7 @@ namespace CaseStudyExample.Models
 
         [Required]
         [EnumDataType(typeof(OrderStatus))]
-        public OrderStatus OrderStatus { get; set; } = OrderStatus.Pending;
+        public OrderStatus OrderStatus { get; set; }
 
         public virtual Users? Users { get; set; } = null!;
         public virtual Products? Products { get; set; } = null!;
@@ -35,9 +35,9 @@ namespace CaseStudyExample.Models
     }
     public enum OrderStatus
     {
-        Pending,
-        Shipped,
-        Delivered,
-        Cancelled
+        Pending = 0,
+        Shipped = 1,
+        Delivered = 2,
+        Cancelled = 3
     }
 }
